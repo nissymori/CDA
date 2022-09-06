@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from src.sent_att_model_1 import SentAttNet
-from src.word_att_model_1 import WordAttNet
+from .sent_att_model_1 import SentAttNet
+from .word_att_model_1 import WordAttNet
 import torch.nn.functional as F
 
 class HierGraphNet(nn.Module):

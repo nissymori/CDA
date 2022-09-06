@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from src.sent_att_model import SentAttNet
-from src.dg_word_att_model import WordAttNet
+from .sent_att_model import SentAttNet
+from .dg_word_att_model import WordAttNet
 import torch.nn.functional as F
 
 class DHierGraphNet(nn.Module):

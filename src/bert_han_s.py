@@ -1,5 +1,5 @@
 import torch.nn as nn
-from src.sent_att_model_bert import SentAttNet
+from .sent_att_model_bert import SentAttNet
 import torch.nn.functional as F
 
 class HierAttNet(nn.Module):

@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from src.sent_att_model import SentAttNet
+from .sent_att_model import SentAttNet
 import torch.nn.functional as F
 
 class DHierGraphNet(nn.Module):

@@ -4,7 +4,7 @@ import numpy as np
 import os
 import torch.nn as nn
 import torch.nn.functional as F
-from src.utils import matrix_mul, element_wise_mul
+from .utils import matrix_mul, element_wise_mul
 
 seed=42
 random.seed(seed)
