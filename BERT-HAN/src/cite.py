@@ -352,21 +352,21 @@ class DocRelProcessor(DataProcessor):
 
     def read_csv(self, input_file, quotechar='"'):
         """Reads a tab separated value file."""
-        with open(input_file, "r", encoding="utf-8-sig") as f:
+        with open(input_file, "r", encoding="utf-8-sig", errors="ignore") as f:  ## added errors="ignore"
             return list(csv.reader(f, delimiter=",", quotechar=quotechar))
 
     def read_txt(self, input_file):
         """Reads a tab separated value file."""
-        with open(input_file, "r", encoding="utf-8-sig") as f:
+        with open(input_file, "r", encoding="utf-8-sig", errors="ignore") as f:  ## added errors="ignore"
             return list(f)
 
     def get_train_examples(self, data_dir):
         """See base class."""
-        return self._create_examples(self.read_csv(os.path.join(data_dir, "train_cite.csv")), "train")
+        return self._create_examples(self.read_csv(os.path.join(data_dir, "consistency_train.csv")), "train")   ## changed
 
     def get_dev_examples(self, data_dir):
         """See base class."""
-        return self._create_examples(self.read_csv(os.path.join(data_dir, "dev_cite.csv")), "dev")
+        return self._create_examples(self.read_csv(os.path.join(data_dir, "consistency_test.csv")), "dev")  ## changed
 
     def get_labels(self):
         """See base class."""
