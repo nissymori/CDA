@@ -10,11 +10,11 @@ from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss, BCELoss
 
 from transformers import BertConfig
-from src.file_utils import add_start_docstrings, add_start_docstrings_to_callable
-from src.modeling_utils import PreTrainedModel, prune_linear_layer
-from src.bert_han import HierAttNet 
-from src.bert_han_sg import HierGraphAttNet
-from src.bert_avg import AvgNet
+from .file_utils import add_start_docstrings, add_start_docstrings_to_callable
+from .modeling_utils import PreTrainedModel, prune_linear_layer
+from .bert_han import HierAttNet 
+from .bert_han_sg import HierGraphAttNet
+from .bert_avg import AvgNet
 
 logger = logging.getLogger(__name__)
 
